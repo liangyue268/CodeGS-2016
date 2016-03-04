@@ -1,6 +1,6 @@
 import React from 'react';
 import MyComponent from '../../../../MyComponent/MyComponent';
-import Gridster from './dependencies/Gridster';
+import Gridster from './dependencies/gridster/Gridster';
 import meta from '../../../../MyComponent/meta.json';
 
 const COMPONENT_TO_SHOW = MyComponent;

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Dashboard from './src/dashbaord/Dashboard';
+import Dashboard from './src/dashboard/Dashboard';
 import Header from './src/header/Header';
 
 class Sandbox extends React.Component {
