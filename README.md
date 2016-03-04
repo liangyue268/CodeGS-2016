@@ -5,12 +5,18 @@ Use MyComponent as your starting point.
 ##Prereqs
 Make sure you have node, npm, gulp installed on your computer
 
-    [node+npm](https://nodejs.org/en/)
+[node+npm](https://nodejs.org/en/)
 
 
 install gulp:
 
-    npm install -g gulp
+npm install -g gulp
+
+##Fast start on mac
+1. Run the build-mac.sh script
+```bash
+bash build-mac.sh
+```
 
 ##To use:
 
