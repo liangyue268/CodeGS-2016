@@ -1,6 +1,6 @@
 #What this is:
 Sandbox environment to build a web component.
-All you have to do is modify the MyComponent for what you need.
+Use MyComponent as your starting point.
 
 ##Prereqs
 Make sure you have node, npm, gulp installed on your computer
