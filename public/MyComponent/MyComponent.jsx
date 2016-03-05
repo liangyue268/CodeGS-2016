@@ -18,7 +18,7 @@ export default class MyComponent extends React.Component {
 	constructor() {
 		super();
         var self = this;
-        $('body').on('cityChange', function(event, argument){
+        $('body').on('cityChange1', function(event, argument){
             //$('div.my-component').text(arguments[1]);
             //console.log(arguments);
             //console.log(event);
@@ -28,17 +28,6 @@ export default class MyComponent extends React.Component {
 
         });
 		this.bindMethods();
-<<<<<<< HEAD
-        var self = this;
-        $('body').on('cityChange1', function(event, argument){
-            //$('div.my-component').text(arguments[1]);
-            self.setState({cityName:arguments[1]});
-            console.log(this.state);
-            self.forceUpdate();
-
-        });
-=======
->>>>>>> 8359d25cd7608bbbb143390bc17a63b1f5fffe94
         this.state = {cityName: "New York"};
 	}
 
