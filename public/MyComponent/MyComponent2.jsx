@@ -17,8 +17,16 @@ export default class MyComponent2 extends React.Component {
     // ----------------------------------------------------
 	constructor() {
 		super();
+        var self = this;
+        $('body').on('cityChange2', function(event, argument){
+            //$('div.my-component').text(arguments[1]);
+            self.setState({cityName:arguments[1]});
+            console.log(this.state);
+            self.forceUpdate();
+
+        });
 		this.bindMethods();
-        this.state = {userName:null};
+        this.state = {cityName: "New York"};
 	}
 
     componentDidMount() {
@@ -74,9 +82,8 @@ export default class MyComponent2 extends React.Component {
         this.dragStop = this.dragStop.bind(this);
     }
 
-    assetFieldChanged(event) {
-        var text = event.target.value;
-        this.setState({userName:text}, function() {
+    assetFieldChanged(text) {
+        this.setState({cityName:text}, function() {
             this.props.meta.state =  this.state;
         });
     }
@@ -86,6 +93,8 @@ export default class MyComponent2 extends React.Component {
 	 * @return {[type]} [description]
 	 */
   	render() {
+
+		var name = this.state.cityName;
 		var urlLink = "http://www.yelp.com/search?find_desc=Museums&find_loc=New+York";
 		return (
 			<div className='my-component'>

@@ -37,6 +37,9 @@
   width: 100%;
   background-color: #6A95C7;
   text-align: center; }
+  .my-component iframe {
+    height: 100%;
+    width: 100%; }
 
 .website-link {
   height: 90%;

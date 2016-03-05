@@ -10,15 +10,24 @@ import SubComponentA from './subcomponents/SubComponentA';
  * <INSERT DOC URL>
  */
 export default class MyComponent extends React.Component {
-
     // ---------------------------------------------------
     // VIEW LIFECYCLE. THESE ARE CALLED BY REACT AUTOMATICALLY
     // ALL METHODS ARE OPTIONAL
     // ----------------------------------------------------
 	constructor() {
 		super();
+        var self = this;
+        $('body').on('cityChange1', function(event, argument){
+            //$('div.my-component').text(arguments[1]);
+            //console.log(arguments);
+            //console.log(event);
+            self.setState({cityName:arguments[1]});
+            console.log(this.state);
+            self.forceUpdate();
+
+        });
 		this.bindMethods();
-        this.state = {userName:null};
+        this.state = {cityName: "New York"};
 	}
 
     componentDidMount() {
@@ -74,9 +83,8 @@ export default class MyComponent extends React.Component {
         this.dragStop = this.dragStop.bind(this);
     }
 
-    assetFieldChanged(event) {
-        var text = event.target.value;
-        this.setState({userName:text}, function() {
+    assetFieldChanged(text) {
+        this.setState({cityName:text}, function() {
             this.props.meta.state =  this.state;
         });
     }
@@ -88,13 +96,15 @@ export default class MyComponent extends React.Component {
 	//var urlLink = "http://www.pace.edu";
 
   	render() {
-		return (
-			<div className='my-component'>
-				<br/>
-				<input placeholder="Type your name" style={{width:'50%'}} type="text" value={this.state.userName} onChange={this.assetFieldChanged.bind(this)}></input>
-				<br/>
-				<p style={{color:'white'}}>Welcome: {this.state.userName} </p>
-			</div>
+
+  	    var param=this.state.cityName;
+  	    var url="http://query.nytimes.com/search/sitesearch/?action=click&contentCollection&region=TopBar&WT.nav=searchWidget&module=SearchSubmit&pgtype=Homepage#/";
+        url+=param;
+	    return (
+		<div className='my-component'>
+           <iframe src={url}></iframe>
+            <div><a href={url}>pace</a><p>66666666</p></div>
+        </div>
 	    );
   	}
 }

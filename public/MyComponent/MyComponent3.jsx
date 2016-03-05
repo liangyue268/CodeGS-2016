@@ -18,7 +18,15 @@ export default class MyComponent3 extends React.Component {
 	constructor() {
 		super();
 		this.bindMethods();
-        this.state = {userName:null};
+        var self = this;
+        $('body').on('cityChange3', function(event, argument){
+            //$('div.my-component').text(arguments[1]);
+            self.setState({cityName:arguments[1]});
+            console.log(this.state);
+            self.forceUpdate();
+
+        });
+        this.state = {cityName: "New York"};
 	}
 
     componentDidMount() {
@@ -86,6 +94,7 @@ export default class MyComponent3 extends React.Component {
 	 * @return {[type]} [description]
 	 */
   	render() {
+		var name = this.state.cityName;
 		var imgUrl = "MyComponent/img/have_fun.png";
 		var divStyle = {
 			backgroundImage: 'url(' + imgUrl + ')',
@@ -106,8 +115,8 @@ export default class MyComponent3 extends React.Component {
 				<a className="webLink" href={urlLink3}>Find Activety Within 20 miles</a><p/>
 
 			</div>
+			</div>
 
-        </div>
-	    );
+        );
   	}
 }
