@@ -31,6 +31,8 @@ export default class Header extends React.Component {
 	    			<option value="New York">New York</option>
 	    			<option value="New Jersey">New Jersey</option>
 	    			<option value="California">California</option>
+	    			<option value="Texas">Texas</option>
+	    			<option value="Illinois">Illinois</option>
 	    		</select>    				
 	    	</div>
 	    );
