@@ -17,6 +17,10 @@ export default class MyComponent2 extends React.Component {
     // ----------------------------------------------------
 	constructor() {
 		super();
+        $('body').on('cityChange',function(event, argument){
+            console.log(arguments[1]);
+            //$("p#test").text(event.data.msg);
+        });
 		this.bindMethods();
         this.state = {userName:null};
 	}
@@ -88,6 +92,7 @@ export default class MyComponent2 extends React.Component {
   	render() {
 	    return (
 		<div className='my-component'>
+            <p id="test"></p>
             <br/>
             <input placeholder="Type your name" style={{width:'50%'}} type="text" value={this.state.userName} onChange={this.assetFieldChanged.bind(this)}></input>
             <br/>
