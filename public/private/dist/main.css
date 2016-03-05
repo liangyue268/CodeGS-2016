@@ -50,11 +50,19 @@
   width: 100%; }
 
 .webLink {
+  color: white;
+  text-align: center; }
+
+.linkText {
   color: white; }
 
 iframe {
   height: 100%;
   width: 100%; }
+
+.linkMeet {
+  color: white;
+  font-size: 150%; }
 
 body, html {
   width: 100%;
