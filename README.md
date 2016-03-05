@@ -12,10 +12,11 @@ install gulp:
 
 npm install -g gulp
 
-##Fast start on mac
-1. Run the build-mac.sh script
+##Fast start
+1. Give execute permission and run the build.sh script
 ```bash
-bash build-mac.sh
+chmod +x build.sh
+bash build.sh
 ```
 
 ##To use:
