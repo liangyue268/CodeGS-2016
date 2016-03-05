@@ -20,9 +20,69 @@ const COMPONENT_TO_SHOW3 = MyComponent3;
     }
 
     insertComponents(components) {
-        var el = React.createElement(components[0], {meta:meta});
-        var el2 = React.createElement(components[1], {meta:meta});
-        var el3 = React.createElement(components[2], {meta:meta});
+        var el = React.createElement(components[0], {meta:{
+    "state":
+    {
+        "userName": ""
+    },
+    "type": "MyComponent",
+    "title": "My component.",
+    "blurb": "A component to show you the basics",
+    "layouts":
+    {
+        "web":
+            {
+                "col": 1,
+                "row": 2,
+                "size_x": 6,
+                "size_y": 5
+            },
+        "mobile": {},
+        "print": {}
+    }
+}});
+        var el2 = React.createElement(components[1], {meta:{
+    "state":
+    {
+        "userName": ""
+    },
+    "type": "MyComponent",
+    "title": "My component.",
+    "blurb": "A component to show you the basics",
+    "layouts":
+    {
+        "web":
+            {
+                "col": 12,
+                "row": 1,
+                "size_x": 6,
+                "size_y": 10
+            },
+        "mobile": {},
+        "print": {}
+    }
+}});
+        var el3 = React.createElement(components[2], {meta:{
+    "state":
+    {
+        "userName": ""
+    },
+    "type": "MyComponent",
+    "title": "My component.",
+    "blurb": "A component to show you the basics",
+    "layouts":
+    {
+        "web":
+            {
+                "col": 1,
+                "row": 1,
+                "size_x": 6,
+                "size_y": 5
+            },
+        "mobile": {},
+        "print": {}
+    }
+}});
         var elements = [el, el2, el3];
         return elements;
     }
