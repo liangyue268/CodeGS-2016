@@ -18,7 +18,15 @@ export default class MyComponent extends React.Component {
 	constructor() {
 		super();
 		this.bindMethods();
-        this.state = {userName:null};
+        var self = this;
+        $('body').on('cityChange1', function(event, argument){
+            //$('div.my-component').text(arguments[1]);
+            self.setState({cityName:arguments[1]});
+            console.log(this.state);
+            self.forceUpdate();
+
+        });
+        this.state = {cityName: "New York"};
 	}
 
     componentDidMount() {
@@ -86,12 +94,10 @@ export default class MyComponent extends React.Component {
 	 * @return {[type]} [description]
 	 */
   	render() {
+        var name = this.state.cityName;
 	    return (
 		<div className='my-component'>
-            <br/>
-            <input placeholder="Type your name" style={{width:'50%'}} type="text" value={this.state.userName} onChange={this.assetFieldChanged.bind(this)}></input>
-            <br/>
-            <p style={{color:'white'}}>Welcome: {this.state.userName} </p>
+            {name + "1"}
         </div>
 	    );
   	}

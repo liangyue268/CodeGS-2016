@@ -18,10 +18,8 @@ export default class MyComponent2 extends React.Component {
 	constructor() {
 		super();
         var self = this;
-        $('body').on('cityChange', function(event, argument){
+        $('body').on('cityChange2', function(event, argument){
             //$('div.my-component').text(arguments[1]);
-            //console.log(arguments);
-            //console.log(event);
             self.setState({cityName:arguments[1]});
             console.log(this.state);
             self.forceUpdate();
@@ -99,7 +97,7 @@ export default class MyComponent2 extends React.Component {
         //console.log(this);
 	    return (
 		<div className='my-component'>
-            {name}
+            {name + "2"}
         </div>
 	    );
   	}

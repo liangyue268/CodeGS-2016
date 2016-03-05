@@ -6,7 +6,9 @@ export default class Header extends React.Component {
         super();
         window.publish = function() {
         	//console.log("hello");
-        	$("body").trigger('cityChange', arguments);
+        	$("body").trigger('cityChange1', arguments);
+        	$("body").trigger('cityChange2', arguments);
+        	$("body").trigger('cityChange3', arguments);
         };
 
     }
