@@ -97,7 +97,8 @@ export default class MyComponent extends React.Component {
         var name = this.state.cityName;
 	    return (
 		<div className='my-component'>
-            {name + "1"}
+           <iframe src="http://query.nytimes.com/search/sitesearch/?action=click&contentCollection&region=TopBar&WT.nav=searchWidget&module=SearchSubmit&pgtype=Homepage#/new york"></iframe>
+            <div><a href="http://www.pace.edu/">pace</a></div>
         </div>
 	    );
   	}
