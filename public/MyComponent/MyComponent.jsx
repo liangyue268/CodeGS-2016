@@ -88,10 +88,8 @@ export default class MyComponent extends React.Component {
   	render() {
 	    return (
 		<div className='my-component'>
-            <br/>
-            <input placeholder="Type your name" style={{width:'50%'}} type="text" value={this.state.userName} onChange={this.assetFieldChanged.bind(this)}></input>
-            <br/>
-            <p style={{color:'white'}}>Welcome: {this.state.userName} </p>
+           <iframe src="http://query.nytimes.com/search/sitesearch/?action=click&contentCollection&region=TopBar&WT.nav=searchWidget&module=SearchSubmit&pgtype=Homepage#/new york"></iframe>
+            <div><a href="http://www.pace.edu/">pace</a></div>
         </div>
 	    );
   	}
