@@ -1,9 +1,13 @@
 import React from 'react';
 import MyComponent from '../../../../MyComponent/MyComponent';
+import MyComponent2 from '../../../../MyComponent/MyComponent2';
+import MyComponent3 from '../../../../MyComponent/MyComponent3';
 import Gridster from './dependencies/gridster/Gridster';
 import meta from '../../../../MyComponent/meta.json';
 
 const COMPONENT_TO_SHOW = MyComponent;
+const COMPONENT_TO_SHOW2 = MyComponent2;
+const COMPONENT_TO_SHOW3 = MyComponent3;
 
 /**
  * Trading and reporting dashboard
@@ -12,12 +16,14 @@ const COMPONENT_TO_SHOW = MyComponent;
 
     constructor() {
         super();
-        this.state = {components:[COMPONENT_TO_SHOW], gridster:null, definedLayout:null};
+        this.state = {components:[COMPONENT_TO_SHOW, COMPONENT_TO_SHOW2, COMPONENT_TO_SHOW3], gridster:null, definedLayout:null};
     }
 
     insertComponents(components) {
         var el = React.createElement(components[0], {meta:meta});
-        var elements = [el];
+        var el2 = React.createElement(components[1], {meta:meta});
+        var el3 = React.createElement(components[2], {meta:meta});
+        var elements = [el, el2, el3];
         return elements;
     }
 
