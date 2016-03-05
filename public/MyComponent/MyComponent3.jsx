@@ -110,9 +110,9 @@ export default class MyComponent3 extends React.Component {
 		return (
 		<div className='my-component'>
 			<div className='webLink' style = {divStyle}>
-				<a className ="linkMeet" href={urlLink1}>Find Activety Within 1 miles</a><p/>
-				<a className ="linkMeet" href={urlLink2}>Find Activety Within 10 miles</a><p/>
-				<a className ="linkMeet" href={urlLink3}>Find Activety Within 20 miles</a><p/>
+				<a className ="linkMeet" href={urlLink1}>Find Activeties Within 1 miles</a><p/>
+				<a className ="linkMeet" href={urlLink2}>Find Activeties Within 10 miles</a><p/>
+				<a className ="linkMeet" href={urlLink3}>Find Activeties Within 20 miles</a><p/>
 			</div>
 			<div className ="linkText">Meetup Location:{name}</div>
 			</div>
