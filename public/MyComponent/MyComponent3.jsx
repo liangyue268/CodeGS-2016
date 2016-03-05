@@ -18,6 +18,7 @@ export default class MyComponent3 extends React.Component {
 	constructor() {
 		super();
 		this.bindMethods();
+        this.state = {cityName: "New York"};
         var self = this;
         $('body').on('cityChange3', function(event, argument){
             //$('div.my-component').text(arguments[1]);
@@ -26,7 +27,6 @@ export default class MyComponent3 extends React.Component {
             self.forceUpdate();
 
         });
-        this.state = {cityName: "New York"};
 	}
 
     componentDidMount() {
