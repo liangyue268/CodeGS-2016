@@ -85,14 +85,16 @@ export default class MyComponent extends React.Component {
 	 * Create component HTML
 	 * @return {[type]} [description]
 	 */
+	//var urlLink = "http://www.pace.edu";
+
   	render() {
-	    return (
-		<div className='my-component'>
-            <br/>
-            <input placeholder="Type your name" style={{width:'50%'}} type="text" value={this.state.userName} onChange={this.assetFieldChanged.bind(this)}></input>
-            <br/>
-            <p style={{color:'white'}}>Welcome: {this.state.userName} </p>
-        </div>
+		return (
+			<div className='my-component'>
+				<br/>
+				<input placeholder="Type your name" style={{width:'50%'}} type="text" value={this.state.userName} onChange={this.assetFieldChanged.bind(this)}></input>
+				<br/>
+				<p style={{color:'white'}}>Welcome: {this.state.userName} </p>
+			</div>
 	    );
   	}
 }

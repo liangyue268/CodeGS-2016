@@ -86,12 +86,27 @@ export default class MyComponent3 extends React.Component {
 	 * @return {[type]} [description]
 	 */
   	render() {
-	    return (
+		var imgUrl = "MyComponent/img/have_fun.png";
+		var divStyle = {
+			backgroundImage: 'url(' + imgUrl + ')',
+			///backgroundColor: "black",
+			height: "100%",
+			width: "100%",
+			textAlign:"left"
+		};
+		var urlLink1 = "http://www.meetup.com/find/events/?allMeetups=false&keywords=Snowboard&radius=1&userFreeform=New+York";
+		var urlLink2 = "http://www.meetup.com/find/events/?allMeetups=false&keywords=Snowboard&radius=10&userFreeform=New+York";
+		var urlLink3 = "http://www.meetup.com/find/events/?allMeetups=false&keywords=Snowboard&radius=20&userFreeform=New+York";
+
+		return (
 		<div className='my-component'>
-            <br/>
-            <input placeholder="Type your name" style={{width:'50%'}} type="text" value={this.state.userName} onChange={this.assetFieldChanged.bind(this)}></input>
-            <br/>
-            <p style={{color:'white'}}>Welcome: {this.state.userName} </p>
+			<div style = {divStyle}>
+				<a className="webLink" href={urlLink1}>Find Activety Within 1 miles</a><p/>
+				<a className="webLink" href={urlLink2}>Find Activety Within 10 miles</a><p/>
+				<a className="webLink" href={urlLink3}>Find Activety Within 20 miles</a><p/>
+
+			</div>
+
         </div>
 	    );
   	}

@@ -86,13 +86,14 @@ export default class MyComponent2 extends React.Component {
 	 * @return {[type]} [description]
 	 */
   	render() {
-	    return (
-		<div className='my-component'>
-            <br/>
-            <input placeholder="Type your name" style={{width:'50%'}} type="text" value={this.state.userName} onChange={this.assetFieldChanged.bind(this)}></input>
-            <br/>
-            <p style={{color:'white'}}>Welcome: {this.state.userName} </p>
-        </div>
+		var urlLink = "http://www.yelp.com/search?find_desc=Museums&find_loc=New+York";
+		return (
+			<div className='my-component'>
+				<iframe className = 'website-link' src = {urlLink}></iframe>
+				<a href = {urlLink} style={{color:'white'}}> Goto the Full Pager Website</a>
+
+			</div>
+
 	    );
   	}
 }
