@@ -95,24 +95,25 @@ export default class MyComponent3 extends React.Component {
 	 */
   	render() {
 		var name = this.state.cityName;
-		var imgUrl = "MyComponent/img/have_fun.png";
-		var divStyle = {
-			backgroundImage: 'url(' + imgUrl + ')',
-			///backgroundColor: "black",
-			height: "90%",
-			width: "100%",
-			textAlign:"center"
-		};
+		var imgUrl = "MyComponent/img/have_fun3.jpg";
+		//var divStyle = {
+		//	backgroundImage: 'url(' + imgUrl + ')',
+		//	///backgroundColor: "black",
+		//	height: "90%",
+		//	width: "100%",
+		//	textAlign:"center",
+		//	fontSize: "200%"
+		//};
 		var urlLink1 = "http://www.meetup.com/find/events/?allMeetups=false&keywords=Snowboard&radius=1&userFreeform="+name.replace(" ","+");
 		var urlLink2 = "http://www.meetup.com/find/events/?allMeetups=false&keywords=Snowboard&radius=10&userFreeform="+name.replace(" ","+");
 		var urlLink3 = "http://www.meetup.com/find/events/?allMeetups=false&keywords=Snowboard&radius=20&userFreeform="+name.replace(" ","+");
 
 		return (
 		<div className='my-component'>
-			<div className='webLink' style = {divStyle}>
-				<a className ="linkMeet" href={urlLink1}>Find Activeties Within 1 miles</a><p/>
-				<a className ="linkMeet" href={urlLink2}>Find Activeties Within 10 miles</a><p/>
-				<a className ="linkMeet" href={urlLink3}>Find Activeties Within 20 miles</a><p/>
+			<div className='webLink'  className = "backImg">
+				<a className ="linkMeet" href={urlLink1}>Find Activeties Within 1 miles</a><p/><p/><p/><p/><br/>
+				<a className ="linkMeet" href={urlLink2}>Find Activeties Within 10 miles</a><p/><p/><p/><p/><br/>
+				<a className ="linkMeet" href={urlLink3}>Find Activeties Within 20 miles</a><p/><p/><p/><p/><br/>
 			</div>
 			<div className ="linkText">Meetup Location:{name}</div>
 			</div>

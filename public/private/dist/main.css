@@ -64,6 +64,13 @@ iframe {
   color: white;
   font-size: 150%; }
 
+.backImg {
+  background-image: url("../../MyComponent/img/header_map2.jpg");
+  height: 90%;
+  width: 100%;
+  text-align: center;
+  background-repeat: no-repeat; }
+
 body, html {
   width: 100%;
   height: 100%; }
