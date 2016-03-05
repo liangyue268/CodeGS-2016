@@ -26,7 +26,7 @@ export default class Header extends React.Component {
   	render() {
 	    return (
 	    	<div className="header">
-	    		<span> World News: </span>
+	    		<span> Local Information: </span>
 	    		<select class = "source" onChange={this.handleChange}>
 	    			<option value="New York">New York</option>
 	    			<option value="New Jersey">New Jersey</option>
