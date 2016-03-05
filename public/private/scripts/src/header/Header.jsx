@@ -14,7 +14,7 @@ export default class Header extends React.Component {
     handleChange(event) {
     	window.publish(event.target.value);
     	//console.log(event.target.value);
-    	this.setState({value: event.target.value.substr(0, 140)});
+    	//this.setState({value: event.target.value.substr(0, 140)});
     }
 
 	/**
@@ -24,8 +24,7 @@ export default class Header extends React.Component {
   	render() {
 	    return (
 	    	<div className="header">
-	    		<span> "World News: "</span>
-
+	    		<span> World News: </span>
 	    		<select class = "source" onChange={this.handleChange}>
 	    			<option value="New York">New York</option>
 	    			<option value="New Jersey">New Jersey</option>
