@@ -13,7 +13,7 @@ export default class Header extends React.Component {
 
     handleChange(event) {
     	window.publish(event.target.value);
-    	console.log(event.target.value);
+    	//console.log(event.target.value);
     	this.setState({value: event.target.value.substr(0, 140)});
     }
 
