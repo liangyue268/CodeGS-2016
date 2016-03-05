@@ -28,7 +28,7 @@ export default class MyComponent2 extends React.Component {
 
         });
 		this.bindMethods();
-        this.state = {cityName:null};
+        this.state = {cityName: "New York"};
 	}
 
     componentDidMount() {
