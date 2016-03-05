@@ -17,12 +17,18 @@ export default class MyComponent2 extends React.Component {
     // ----------------------------------------------------
 	constructor() {
 		super();
-        $('body').on('cityChange',function(event, argument){
-            //$("p#test").text(event.data.msg);
-            $(div.my-component).text(arguments[1]);
+        var self = this;
+        $('body').on('cityChange', function(event, argument){
+            //$('div.my-component').text(arguments[1]);
+            //console.log(arguments);
+            //console.log(event);
+            self.setState({cityName:arguments[1]});
+            console.log(this.state);
+            self.forceUpdate();
+
         });
 		this.bindMethods();
-        this.state = {userName:null};
+        this.state = {cityName: "New York"};
 	}
 
     componentDidMount() {
@@ -78,9 +84,8 @@ export default class MyComponent2 extends React.Component {
         this.dragStop = this.dragStop.bind(this);
     }
 
-    assetFieldChanged(event) {
-        var text = event.target.value;
-        this.setState({userName:text}, function() {
+    assetFieldChanged(text) {
+        this.setState({cityName:text}, function() {
             this.props.meta.state =  this.state;
         });
     }
@@ -90,13 +95,11 @@ export default class MyComponent2 extends React.Component {
 	 * @return {[type]} [description]
 	 */
   	render() {
+        var name = this.state.cityName;
+        //console.log(this);
 	    return (
 		<div className='my-component'>
-            <p id="test"></p>
-            <br/>
-            <input placeholder="Type your name" style={{width:'50%'}} type="text" value={this.state.userName} onChange={this.assetFieldChanged.bind(this)}></input>
-            <br/>
-            <p style={{color:'white'}}>Welcome: {this.state.userName} </p>
+            {name}
         </div>
 	    );
   	}
