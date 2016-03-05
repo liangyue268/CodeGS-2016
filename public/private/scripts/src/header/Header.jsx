@@ -25,7 +25,10 @@ export default class Header extends React.Component {
 	 */
   	render() {
 	    return (
+
 	    	<div className="header">
+				<p>CodeGS-Team 12</p>
+				<p className = "title">EXPLORE THE WORLD WITH US</p>
 	    		<span> World News: </span>
 	    		<select class = "source" onChange={this.handleChange}>
 	    			<option value="New York">New York</option>
