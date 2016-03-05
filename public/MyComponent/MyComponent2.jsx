@@ -18,8 +18,8 @@ export default class MyComponent2 extends React.Component {
 	constructor() {
 		super();
         $('body').on('cityChange',function(event, argument){
-            console.log(arguments[1]);
             //$("p#test").text(event.data.msg);
+            $(div.my-component).text(arguments[1]);
         });
 		this.bindMethods();
         this.state = {userName:null};
