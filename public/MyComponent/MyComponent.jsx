@@ -102,8 +102,8 @@ export default class MyComponent extends React.Component {
         url+=param;
 	    return (
 		<div className='my-component'>
-           <iframe src={url}></iframe>
-            <div><a href={url}>pace</a><p>66666666</p></div>
+           <iframe className = 'website-link' src={url}></iframe>
+            <div><a className ="linkText" href={url}>Goto The New York Times</a></div>
         </div>
 	    );
   	}

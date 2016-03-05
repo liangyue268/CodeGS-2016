@@ -95,14 +95,13 @@ export default class MyComponent2 extends React.Component {
   	render() {
 
 		var name = this.state.cityName;
-		var urlLink = "http://www.yelp.com/search?find_desc=Museums&find_loc=New+York";
+		var urlLink = "http://www.yelp.com/search?find_desc=Museums&find_loc=";
+		urlLink+=name.replace(" ","+");
 		return (
 			<div className='my-component'>
 				<iframe className = 'website-link' src = {urlLink}></iframe>
-				<a href = {urlLink} style={{color:'white'}}> Goto the Full Pager Website</a>
-
+				<a className ="linkText" href = {urlLink}> Goto the Yelp</a>
 			</div>
-
 	    );
   	}
 }
