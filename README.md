@@ -1,6 +1,8 @@
-#What this is:
-Sandbox environment to build a web component.
-Use MyComponent as your starting point.
+##Description
+This is a website designed for tourist, in which they can search some useful information based on their location. So far, we can provide them with information about food, local news and interesting activities. Each component is independent, so it is easy to add as many as we want. You can drag it and resize it to the layout you like, please try it!
+
+![demo](https://github.com/liangyue268/CodeGS-2016/raw/master/demo.jpg)
+
 
 ##Prereqs
 Make sure you have node, npm, gulp installed on your computer
@@ -14,33 +16,9 @@ npm install -g gulp
 
 ##Fast start
 1. Give execute permission and run the build.sh script
-```bash
+```
 chmod +x build.sh
 bash build.sh
 ```
-
-##To use:
-
-1. Start web server - In root, run:
-
-    ````node server.js````
-
 2. Go to: http://localhost:3000/
-
-3. Edit your component at public/MyComponent/
-
-##Using Gulp:
-Gulp allows you to compile the react code to javascript code. Gulp also compiles sass
-
-1. Compile JS
-
-    ````gulp build ````
-
-2. Compile sass
-
-    ````gulp sass ````
-
-3. Watch changes.
-
-    ````gulp watch ````
 
