@@ -16,9 +16,10 @@ npm install -g gulp
 
 ##Fast start
 1. Give execute permission and run the build.sh script
-```
-chmod +x build.sh
-bash build.sh
-```
+	```
+	chmod +x build.sh
+	bash build.sh
+	```
+	
 2. Go to: http://localhost:3000/
 
